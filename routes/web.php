@@ -1,8 +1,8 @@
 <?php
 
 use App\Livewire\CreateStudent;
+use App\Livewire\ShowStudent;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,4 +24,6 @@ Route::get('/', function () {
     return view('welcome', ['students' => $students]);
 });
 
-Route::get('/students/create', CreateStudent::class);
+Route::post('/students/create', CreateStudent::class);
+
+Route::get('/students/{id}', ShowStudent::class);

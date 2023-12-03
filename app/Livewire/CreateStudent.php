@@ -4,7 +4,6 @@ namespace App\Livewire;
 
 use App\Models\Student;
 use Livewire\Component;
-
 class CreateStudent extends Component
 {
     public $name;
@@ -31,8 +30,6 @@ class CreateStudent extends Component
             'major_id' =>$this->major_id
         ]);
 
-
-
         return redirect()->to('/')->with('status', 'Student Created!');
     }
 
@@ -41,3 +38,4 @@ class CreateStudent extends Component
         return view('livewire.create-student');
     }
 }
+
