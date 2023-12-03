@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    $students = \App\Models\Student::all();
+ 
+    return view('welcome', ['students' => $students]);
+});
