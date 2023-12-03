@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\CreateStudent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/', function () {
  
     return view('welcome', ['students' => $students]);
 });
+
+Route::get('/students/create', CreateStudent::class);
