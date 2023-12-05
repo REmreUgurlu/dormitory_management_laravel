@@ -2,6 +2,7 @@
 
 use App\Livewire\CreateStudent;
 use App\Livewire\ShowStudent;
+use App\Livewire\ShowStudents;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('/', function () {
 Route::post('/students/create', CreateStudent::class);
 
 Route::get('/students/{id}', ShowStudent::class);
+
+Route::get('/students', ShowStudents::class);
