@@ -1,5 +1,4 @@
 <div>
-    <p>{{ $student->id }}</p>
     <p>{{ $student->name }}</p>
     <p>{{ $student->address }}</p>
     <p>{{ $student->gender }}</p>

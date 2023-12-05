@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class ShowStudent extends Component
 {
-    public Student $student;
+    public $student;
 
     public function mount($id){
         $this->student = Student::find($id);
