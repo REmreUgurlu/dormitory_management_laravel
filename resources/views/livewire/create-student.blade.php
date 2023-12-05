@@ -1,4 +1,4 @@
-  <form wire:submit="create_student">
+<form wire:submit="create_student">
     <label for="name">Name:</label>
     <input type="text" id="name" wire:model="name">
     <label for="national_id">National ID:</label>
