@@ -1,7 +1,8 @@
 <?php
 
+use App\Livewire\CreateStudent;
+use App\Livewire\ShowStudent;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/', function () {
+    $students = \App\Models\Student::all();
+ 
+    return view('welcome', ['students' => $students]);
+});
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+Route::post('/students/create', CreateStudent::class);
 
-require __DIR__.'/auth.php';
+Route::get('/students/{id}', ShowStudent::class);
