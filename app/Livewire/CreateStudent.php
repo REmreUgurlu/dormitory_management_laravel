@@ -30,10 +30,7 @@ class CreateStudent extends Component
             'room_number' =>$this->room_number,
             'major_id' =>$this->major_id
         ]);
-
-
-
-        return redirect()->to('/')->with('status', 'Student Created!');
+        return redirect()->to('students')->with('status', 'Student Created!');
     }
 
     public function render()

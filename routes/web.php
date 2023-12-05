@@ -19,11 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    $students = \App\Models\Student::all();
+// Route::get('/', function () {
+//     $students = \App\Models\Student::all();
  
-    return view('welcome', ['students' => $students]);
-});
+//     return view('welcome', ['students' => $students]);
+// });
 
 Route::get('/students/create', CreateStudent::class);
 
