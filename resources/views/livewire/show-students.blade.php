@@ -1,4 +1,6 @@
+{{-- @extends('../layouts.app') --}}
 <div>
+
     @foreach ($students as $student)
         <p>Id: {{ $student->id }} Name:{{ $student->name }} 
         Address:{{ $student->address }} Gender:{{ $student->gender }} 

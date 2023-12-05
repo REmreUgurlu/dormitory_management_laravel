@@ -11,7 +11,7 @@
             </div>
         @endif
  
-        <div class="content">
+        {{-- <div class="content">
             <div class="title m-b-md">
                 <h1>Students:</h1>
             </div>
@@ -21,6 +21,6 @@
                     <h2>Name: {{ $student->name }} Gender: {{ $student->gender }}</h2>
                 @endforeach
             </div>
-        </div>
+        </div> --}}
     </div>
 </body>
