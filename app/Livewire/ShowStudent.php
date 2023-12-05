@@ -11,6 +11,8 @@ class ShowStudent extends Component
 
     public function mount($id){
         $this->student = Student::find($id);
+        $major_name = GetMajor::get($this->student->major_id);
+        $this->student->major_id=$major_name;
     }
 
     public function render()
